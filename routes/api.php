@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\DiscountController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     Route::delete('designation/{designation}','destroy');
 //     Route::post('designation/create','store');
 // });
+Route::controller(DiscountController::class)->group(function(){
+    Route::get('discount','index');
+    Route::post('discount/create','store');
+    Route::get('discount/{discount}','show');
+    Route::post('discount/edit/{id}','update');
+    Route::delete('discount/{discount}','destroy');
+});
