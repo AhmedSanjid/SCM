@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DiscountController;
+use App\Http\Controllers\Api\InsuranceController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +38,11 @@ Route::controller(DiscountController::class)->group(function(){
     Route::get('discount/{discount}','show');
     Route::post('discount/edit/{id}','update');
     Route::delete('discount/{discount}','destroy');
+});
+Route::controller(InsuranceController::class)->group(function(){
+    Route::get('insuranceclaim','index');
+    Route::post('insuranceclaim/create','store');
+    Route::get('insuranceclaim/{insuranceclaim}','show');
+    Route::post('insuranceclaim/edit/{id}','update');
+    Route::delete('insuranceclaim/{insuranceclaim}','destroy');
 });
