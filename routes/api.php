@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DiscountController;
 use App\Http\Controllers\Api\InsuranceController;
+use App\Http\Controllers\Api\AirfreightController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,11 @@ Route::controller(InsuranceController::class)->group(function(){
     Route::get('insuranceclaim/{insuranceclaim}','show');
     Route::post('insuranceclaim/edit/{id}','update');
     Route::delete('insuranceclaim/{insuranceclaim}','destroy');
+});
+Route::controller(AirfreightController::class)->group(function(){
+    Route::get('airfreight','index');
+    Route::post('airfreight/create','store');
+    Route::get('airfreight/{airfreight}','show');
+    Route::post('airfreight/edit/{airfreight}','update');
+    Route::delete('airfreight/{airfreight}','destroy');
 });
