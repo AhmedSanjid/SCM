@@ -1,34 +1,33 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-use App\Models\Insuranceclaim;
-use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
-
+use App\Models\Insurance;
+use App\Http\Controllers\Api\BaseController;
 class InsuranceController extends BaseController
 {
     public function index(){
-        $data=Insuranceclaim::get();
-        return $this->sendResponse($data,"Insuranceclaim data");
+        $data=Insurance::get();
+        return $this->sendResponse($data,"Insurance data");
     }
 
     public function store(Request $request){
-        $data=Insuranceclaim::create($request->all());
-        return $this->sendResponse($data,"Insuranceclaim created successfully");
+        $data=Insurance::create($request->all());
+        return $this->sendResponse($data,"Insurance created successfully");
     }
-    public function show(Insuranceclaim $insuranceclaim){
-        return $this->sendResponse($insuranceclaim,"Insuranceclaim created successfully");
+    public function show(Insurance $insurance){
+        return $this->sendResponse($insurance,"Insurance created successfully");
     }
 
     public function update(Request $request,$id){
 
-        $data=Insuranceclaim::where('id',$id)->update($request->all());
-        return $this->sendResponse($id,"Insuranceclaim updated successfully");
+        $data=Insurance::where('id',$id)->update($request->all());
+        return $this->sendResponse($id,"Insurance updated successfully");
     }
 
-    public function destroy(Insuranceclaim $insuranceclaim)
+    public function destroy(Insurance $insurance)
     {
-        $insuranceclaim=$insuranceclaim->delete();
-        return $this->sendResponse($insuranceclaim,"Insuranceclaim deleted successfully");
+        $insurance=$insurance->delete();
+        return $this->sendResponse($insurance,"Insurance deleted successfully");
     }
 }

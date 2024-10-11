@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DiscountController;
 use App\Http\Controllers\Api\InsuranceController;
 use App\Http\Controllers\Api\AirfreightController;
+use App\Http\Controllers\Api\SailingController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +42,11 @@ Route::controller(DiscountController::class)->group(function(){
     Route::delete('discount/{discount}','destroy');
 });
 Route::controller(InsuranceController::class)->group(function(){
-    Route::get('insuranceclaim','index');
-    Route::post('insuranceclaim/create','store');
-    Route::get('insuranceclaim/{insuranceclaim}','show');
-    Route::post('insuranceclaim/edit/{id}','update');
-    Route::delete('insuranceclaim/{insuranceclaim}','destroy');
+    Route::get('insurance','index');
+    Route::post('insurance/create','store');
+    Route::get('insurance/{insurance}','show');
+    Route::post('insurance/edit/{insurance}','update');
+    Route::delete('insurance/{insurance}','destroy');
 });
 Route::controller(AirfreightController::class)->group(function(){
     Route::get('airfreight','index');
@@ -53,4 +54,11 @@ Route::controller(AirfreightController::class)->group(function(){
     Route::get('airfreight/{airfreight}','show');
     Route::post('airfreight/edit/{airfreight}','update');
     Route::delete('airfreight/{airfreight}','destroy');
+});
+Route::controller(SailingController::class)->group(function(){
+    Route::get('sailingfreight','index');
+    Route::post('sailingfreight/create','store');
+    Route::get('sailingfreight/{sailingfreight}','show');
+    Route::post('sailingfreight/edit/{sailingfreight}','update');
+    Route::delete('sailingfreight/{sailingfreight}','destroy');
 });

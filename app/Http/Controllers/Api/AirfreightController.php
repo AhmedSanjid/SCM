@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
-
 use Illuminate\Http\Request;
 use App\Models\Airfreight;
 use App\Http\Controllers\Api\BaseController;
@@ -17,8 +15,8 @@ class AirfreightController extends BaseController
         $data=Airfreight::create($request->all());
         return $this->sendResponse($data,"Airfreight created successfully");
     }
-    public function show(Airfreight $discount){
-        return $this->sendResponse($discount,"Airfreight created successfully");
+    public function show(Airfreight $airfreight){
+        return $this->sendResponse($airfreight,"Airfreight created successfully");
     }
 
     public function update(Request $request,$id){
@@ -27,10 +25,10 @@ class AirfreightController extends BaseController
         return $this->sendResponse($id,"Airfreight updated successfully");
     }
 
-    public function destroy(Airfreight $discount)
+    public function destroy(Airfreight $airfreight)
     {
-        $discount=$discount->delete();
-        return $this->sendResponse($discount,"Airfreight deleted successfully");
+        $airfreight=$airfreight->delete();
+        return $this->sendResponse($airfreight,"Airfreight deleted successfully");
     }
 }
 
