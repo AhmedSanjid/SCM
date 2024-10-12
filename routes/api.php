@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\DiscountController;
 use App\Http\Controllers\Api\InsuranceController;
 use App\Http\Controllers\Api\AirfreightController;
 use App\Http\Controllers\Api\SailingController;
+use App\Http\Controllers\Api\HighwayController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,11 @@ Route::controller(SailingController::class)->group(function(){
     Route::get('sailingfreight/{sailingfreight}','show');
     Route::post('sailingfreight/edit/{sailingfreight}','update');
     Route::delete('sailingfreight/{sailingfreight}','destroy');
+});
+Route::controller(HighwayController::class)->group(function(){
+    Route::get('highwayfreight','index');
+    Route::post('highwayfreight/create','store');
+    Route::get('highwayfreight/{highwayfreight}','show');
+    Route::post('highwayfreight/edit/{highwayfreight}','update');
+    Route::delete('highwayfreight/{highwayfreight}','destroy');
 });
