@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\InsuranceController;
 use App\Http\Controllers\Api\AirfreightController;
 use App\Http\Controllers\Api\SailingController;
 use App\Http\Controllers\Api\HighwayController;
+use App\Http\Controllers\Api\WarehouseController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +70,11 @@ Route::controller(HighwayController::class)->group(function(){
     Route::get('highwayfreight/{highwayfreight}','show');
     Route::post('highwayfreight/edit/{highwayfreight}','update');
     Route::delete('highwayfreight/{highwayfreight}','destroy');
+});
+Route::controller(WarehouseController::class)->group(function(){
+    Route::get('warehouse','index');
+    Route::post('warehouse/create','store');
+    Route::get('warehouse/{warehouse}','show');
+    Route::post('warehouse/edit/{warehouse}','update');
+    Route::delete('warehouse/{warehouse}','destroy');
 });
