@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Highwayfreight extends Model
+class vendors extends Model
 {
     use HasFactory;
-    protected $fillable=['name', 'company','vehicle_id','arrival_location','insurance_number'];
+    protected $fillable=['name', 'designation','work_status','details','contact_number','email','photo'];
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\SailingController;
 use App\Http\Controllers\Api\HighwayController;
 use App\Http\Controllers\Api\WarehouseController;
 use App\Http\Controllers\Api\StaffsController;
+use App\Http\Controllers\Api\vendorsController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -80,9 +81,16 @@ Route::controller(WarehouseController::class)->group(function(){
     Route::delete('warehouse/{warehouse}','destroy');
 });
 Route::controller(StaffsController::class)->group(function(){
-    Route::get('staffs','index');
-    Route::post('staffs/create','store');
-    Route::get('staffs/{staffs}','show');
-    Route::post('staffs/edit/{staffs}','update');
-    Route::delete('staffs/{staffs}','destroy');
+    Route::get('staff','index');
+    Route::post('staff/create','store');
+    Route::get('staff/{staff}','show');
+    Route::post('staff/edit/{staff}','update');
+    Route::delete('staff/{staff}','destroy');
+});
+Route::controller(vendorsController::class)->group(function(){
+    Route::get('vendors','index');
+    Route::post('vendors/create','store');
+    Route::get('vendors/{vendors}','show');
+    Route::post('vendors/edit/{vendors}','update');
+    Route::delete('vendors/{vendors}','destroy');
 });
