@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\HighwayController;
 use App\Http\Controllers\Api\WarehouseController;
 use App\Http\Controllers\Api\StaffsController;
 use App\Http\Controllers\Api\vendorsController;
+use App\Http\Controllers\Api\freightsOfController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -93,4 +94,11 @@ Route::controller(vendorsController::class)->group(function(){
     Route::get('vendors/{vendors}','show');
     Route::post('vendors/edit/{vendors}','update');
     Route::delete('vendors/{vendors}','destroy');
+});
+Route::controller(freightsOfController::class)->group(function(){
+    Route::get('freights','index');
+    Route::post('freights/create','store');
+    Route::get('freights/{vendors}','show');
+    Route::post('freights/edit/{freights}','update');
+    Route::delete('freights/{freights}','destroy');
 });
