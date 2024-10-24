@@ -13,19 +13,17 @@ return new class extends Migration
     {
         Schema::create('freights', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('customer_id')->constrained();
-            $table->decimal('total_amount', 10, 2); 
+            $table->integer('customer_id')->constrained();
+            $table->decimal('total_amount', 10, 2);
             $table->decimal('vat', 5, 2);
             $table->string('payment_method', 50);
-            $table->string('shipment_type', 50); 
-            $table->dateTime('pickup_time'); 
-            $table->dateTime('delivery_time'); 
-            $table->integer('total_qty'); 
-            $table->string('pickup_location', 255); 
-            $table->string('delivery_location', 255); 
-            $table->foreignId('transport_type_id')->constrained();
-
+            $table->string('shipment_type', 50);
+            $table->dateTime('pickup_time');
+            $table->dateTime('delivery_time');
+            $table->integer('total_qty');
+            $table->string('pickup_location', 255);
+            $table->string('delivery_location', 255);
+            $table->integer('transport_type_id')->constrained();
             $table->timestamps();
         });
     }

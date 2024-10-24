@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Warehouse extends Model
 {
     use HasFactory;
-    protected $fillable=['name', 'company_name','category','product_details','insurance_number', 'invoice_number'];
+    protected $fillable=['name', 'address','contact_no','employee_id'];
 }
