@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController;;
 use Illuminate\Http\Request;
 use App\Models\TransportType;
 
-class TransportTypeOfController extends Controller
+class TransportTypeOfController extends BaseController
 {
     public function index(){
         $data=TransportType::get();

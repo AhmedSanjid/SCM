@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController;;
 use Illuminate\Http\Request;
 use App\Models\Item;
 
-class ItemOfController extends Controller
+class ItemOfController extends BaseController
 {
     public function index(){
         $data=Item::get();

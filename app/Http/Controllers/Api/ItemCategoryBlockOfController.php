@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 use App\Models\ItemCategory;
 
-class ItemCategoryBlockOfController extends Controller
+class ItemCategoryBlockOfController extends BaseController
 {
     public function index(){
         $data=ItemCategory::get();

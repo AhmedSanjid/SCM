@@ -98,11 +98,11 @@ Route::controller(StaffsController::class)->group(function(){
     Route::delete('staff/{staff}','destroy');
 });
 Route::controller(customersController::class)->group(function(){
-    Route::get('Customers','index');
-    Route::post('Customers/create','store');
-    Route::get('Customers/{Customers}','show');
-    Route::post('Customers/edit/{Customers}','update');
-    Route::delete('Customers/{Customers}','destroy');
+    Route::get('customer','index');
+    Route::post('customer/create','store');
+    Route::get('customer/{customer}','show');
+    Route::post('customer/edit/{customer}','update');
+    Route::delete('customer/{customer}','destroy');
 });
 Route::controller(freightsOfController::class)->group(function(){
     Route::get('freights','index');
