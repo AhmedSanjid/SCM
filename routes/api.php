@@ -91,11 +91,11 @@ Route::controller(WarehouseController::class)->group(function(){
     Route::delete('warehouse/{warehouse}','destroy');
 });
 Route::controller(StaffsController::class)->group(function(){
-    Route::get('staff','index');
-    Route::post('staff/create','store');
-    Route::get('staff/{staff}','show');
-    Route::post('staff/edit/{staff}','update');
-    Route::delete('staff/{staff}','destroy');
+    Route::get('Staff','index');
+    Route::post('Staff/create','store');
+    Route::get('Staff/{Staff}','show');
+    Route::post('Staff/edit/{Staff}','update');
+    Route::delete('Staff/{Staff}','destroy');
 });
 Route::controller(customersController::class)->group(function(){
     Route::get('customer','index');
@@ -126,32 +126,32 @@ Route::controller(CountryOfController::class)->group(function(){
     Route::delete('Country/{Country}','destroy');
 });
 Route::controller(StateOfController::class)->group(function(){
-    Route::get('state','index');
-    Route::post('state/create','store');
-    Route::get('state/{state}','show');
-    Route::post('state/edit/{state}','update');
-    Route::delete('state/{state}','destroy');
+    Route::get('State','index');
+    Route::post('State/create','store');
+    Route::get('State/{State}','show');
+    Route::post('State/edit/{State}','update');
+    Route::delete('State/{State}','destroy');
 });
 Route::controller(locationOfController::class)->group(function(){
-    Route::get('location','index');
-    Route::post('location/create','store');
-    Route::get('location/{location}','show');
-    Route::post('location/edit/{location}','update');
-    Route::delete('location/{location}','destroy');
+    Route::get('Location','index');
+    Route::post('Location/create','store');
+    Route::get('Location/{Location}','show');
+    Route::post('Location/edit/{Location}','update');
+    Route::delete('Location/{Location}','destroy');
 });
 Route::controller(WarehouseBlockOfController::class)->group(function(){
-    Route::get('WarehouseBlock','index');
-    Route::post('WarehouseBlock/create','store');
-    Route::get('WarehouseBlock/{WarehouseBlock}','show');
-    Route::post('WarehouseBlock/edit/{WarehouseBlock}','update');
-    Route::delete('WarehouseBlock/{WarehouseBlock}','destroy');
+    Route::get('Warehouseblock','index');
+    Route::post('Warehouseblock/create','store');
+    Route::get('Warehouseblock/{Warehouseblock}','show');
+    Route::post('Warehouseblock/edit/{Warehouseblock}','update');
+    Route::delete('Warehouseblock/{Warehouseblock}','destroy');
 });
 Route::controller(ItemCategoryBlockOfController::class)->group(function(){
-    Route::get('ItemCategory','index');
-    Route::post('ItemCategory/create','store');
-    Route::get('ItemCategory/{ItemCategory}','show');
-    Route::post('ItemCategory/edit/{ItemCategory}','update');
-    Route::delete('ItemCategory/{ItemCategory}','destroy');
+    Route::get('Itemcategory','index');
+    Route::post('Itemcategory/create','store');
+    Route::get('Itemcategory/{Itemcategory}','show');
+    Route::post('Itemcategory/edit/{Itemcategory}','update');
+    Route::delete('Itemcategory/{Itemcategory}','destroy');
 });
 Route::controller(ItemOfController::class)->group(function(){
     Route::get('Item','index');
@@ -161,16 +161,16 @@ Route::controller(ItemOfController::class)->group(function(){
     Route::delete('Item/{Item}','destroy');
 });
 Route::controller(TransportTypeOfController::class)->group(function(){
-    Route::get('TransportType','index');
-    Route::post('TransportType/create','store');
-    Route::get('TransportType/{TransportType}','show');
-    Route::post('TransportType/edit/{TransportType}','update');
-    Route::delete('TransportType/{TransportType}','destroy');
+    Route::get('Transporttype','index');
+    Route::post('Transporttype/create','store');
+    Route::get('Transporttype/{Transporttype}','show');
+    Route::post('Transporttype/edit/{Transporttype}','update');
+    Route::delete('Transporttype/{Transporttype}','destroy');
 });
 Route::controller(OrderDetailsOfController::class)->group(function(){
-    Route::get('orderdetails','index');
-    Route::post('orderdetails/create','store');
-    Route::get('orderdetails/{orderdetails}','show');
-    Route::post('orderdetails/edit/{orderdetails}','update');
-    Route::delete('orderdetails/{orderdetails}','destroy');
+    Route::get('Orderdetails','index');
+    Route::post('Orderdetails/create','store');
+    Route::get('Orderdetails/{Orderdetails}','show');
+    Route::post('Orderdetails/edit/{Orderdetails}','update');
+    Route::delete('Orderdetails/{Orderdetails}','destroy');
 });
