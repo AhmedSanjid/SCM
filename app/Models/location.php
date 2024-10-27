@@ -11,9 +11,9 @@ class location extends Model
     protected $fillable=['country_id', 'state_id','address'];
 
     public function country(){
-        return $this->belongsTo(country::class);
+        return $this->belongsTo(Country::class);
     }
     public function state(){
-        return $this->belongsTo(state::class);
+        return $this->belongsTo(State::class);
     }
 }

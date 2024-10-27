@@ -128,9 +128,9 @@ Route::controller(StateOfController::class)->group(function(){
 Route::controller(locationOfController::class)->group(function(){
     Route::get('Location','index');
     Route::post('Location/create','store');
-    Route::get('Location/{Location}','show');
-    Route::post('Location/edit/{Location}','update');
-    Route::delete('Location/{Location}','destroy');
+    Route::get('Location/{location}','show');
+    Route::post('Location/edit/{location}','update');
+    Route::delete('Location/{location}','destroy');
 });
 Route::controller(WarehouseBlockOfController::class)->group(function(){
     Route::get('Warehouseblock','index');

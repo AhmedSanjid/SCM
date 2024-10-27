@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('states', function (Blueprint $table) {
             $table->id();
-            $table->integer('country_id')->constrained('countries');
-            $table->string('name');
+             $table->string('name');
+           $table->integer('country_id');
             $table->timestamps();
         });
     }
