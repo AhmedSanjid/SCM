@@ -9,7 +9,6 @@ use App\Http\Controllers\Api\AirfreightController;
 use App\Http\Controllers\Api\SailingController;
 use App\Http\Controllers\Api\HighwayController;
 use App\Http\Controllers\Api\WarehouseController;
-use App\Http\Controllers\Api\StaffsController;
 use App\Http\Controllers\Api\customersController;
 use App\Http\Controllers\Api\freightsOfController;
 use App\Http\Controllers\Api\RoleOfController;
@@ -21,6 +20,7 @@ use App\Http\Controllers\Api\ItemCategoryBlockOfController;
 use App\Http\Controllers\Api\ItemOfController;
 use App\Http\Controllers\Api\TransportTypeOfController;
 use App\Http\Controllers\Api\OrderDetailsOfController;
+use App\Http\Controllers\Api\StaffOfController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
 |--------------------------------------------------------------------------
@@ -89,13 +89,6 @@ Route::controller(WarehouseController::class)->group(function(){
     Route::get('warehouse/{warehouse}','show');
     Route::post('warehouse/edit/{warehouse}','update');
     Route::delete('warehouse/{warehouse}','destroy');
-});
-Route::controller(StaffsController::class)->group(function(){
-    Route::get('Staff','index');
-    Route::post('Staff/create','store');
-    Route::get('Staff/{Staff}','show');
-    Route::post('Staff/edit/{Staff}','update');
-    Route::delete('Staff/{Staff}','destroy');
 });
 Route::controller(customersController::class)->group(function(){
     Route::get('customer','index');
@@ -173,4 +166,11 @@ Route::controller(OrderDetailsOfController::class)->group(function(){
     Route::get('Orderdetails/{Orderdetails}','show');
     Route::post('Orderdetails/edit/{Orderdetails}','update');
     Route::delete('Orderdetails/{Orderdetails}','destroy');
+});
+Route::controller(StaffOfController::class)->group(function(){
+    Route::get('Staff','index');
+    Route::post('Staff/create','store');
+    Route::get('Staff/{Staff}','show');
+    Route::post('Staff/edit/{id}','update');
+    Route::delete('Staff/{id}','destroy');
 });

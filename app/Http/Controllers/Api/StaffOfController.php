@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 use App\Models\Staff;
 
-class StaffsController extends BaseController
+class StaffOfController extends BaseController
 {
     public function index(){
         $data=Staff::get();

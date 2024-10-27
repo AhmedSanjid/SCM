@@ -9,4 +9,11 @@ class location extends Model
 {
     use HasFactory;
     protected $fillable=['country_id', 'state_id','address'];
+
+    public function country(){
+        return $this->belongsTo(country::class);
+    }
+    public function state(){
+        return $this->belongsTo(state::class);
+    }
 }
