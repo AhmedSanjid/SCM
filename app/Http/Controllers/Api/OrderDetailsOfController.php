@@ -9,7 +9,7 @@ use App\Models\OrderDetails;
 class OrderDetailsOfController extends BaseController
 {
     public function index(){
-        $data=OrderDetails::get();
+        $data=OrderDetails::with('item')->get();
         return $this->sendResponse($data,"OrderDetails data");
     }
 

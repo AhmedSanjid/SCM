@@ -107,23 +107,23 @@ Route::controller(freightsOfController::class)->group(function(){
 Route::controller(RoleOfController::class)->group(function(){
     Route::get('Role','index');
     Route::post('Role/create','store');
-    Route::get('Role/{vendors}','show');
-    Route::post('Role/edit/{Role}','update');
-    Route::delete('Role/{Role}','destroy');
+    Route::get('Role/{role}','show');
+    Route::post('Role/edit/{role}','update');
+    Route::delete('Role/{role}','destroy');
 });
 Route::controller(CountryOfController::class)->group(function(){
     Route::get('Country','index');
     Route::post('Country/create','store');
-    Route::get('Country/{Country}','show');
-    Route::post('Country/edit/{Country}','update');
-    Route::delete('Country/{Country}','destroy');
+    Route::get('Country/{country}','show');
+    Route::post('Country/edit/{country}','update');
+    Route::delete('Country/{country}','destroy');
 });
 Route::controller(StateOfController::class)->group(function(){
     Route::get('State','index');
     Route::post('State/create','store');
-    Route::get('State/{State}','show');
-    Route::post('State/edit/{State}','update');
-    Route::delete('State/{State}','destroy');
+    Route::get('State/{state}','show');
+    Route::post('State/edit/{state}','update');
+    Route::delete('State/{state}','destroy');
 });
 Route::controller(locationOfController::class)->group(function(){
     Route::get('Location','index');
@@ -135,42 +135,42 @@ Route::controller(locationOfController::class)->group(function(){
 Route::controller(WarehouseBlockOfController::class)->group(function(){
     Route::get('Warehouseblock','index');
     Route::post('Warehouseblock/create','store');
-    Route::get('Warehouseblock/{Warehouseblock}','show');
-    Route::post('Warehouseblock/edit/{Warehouseblock}','update');
-    Route::delete('Warehouseblock/{Warehouseblock}','destroy');
+    Route::get('Warehouseblock/{warehouseblock}','show');
+    Route::post('Warehouseblock/edit/{warehouseblock}','update');
+    Route::delete('Warehouseblock/{warehouseblock}','destroy');
 });
 Route::controller(ItemCategoryBlockOfController::class)->group(function(){
     Route::get('Itemcategory','index');
     Route::post('Itemcategory/create','store');
-    Route::get('Itemcategory/{Itemcategory}','show');
-    Route::post('Itemcategory/edit/{Itemcategory}','update');
-    Route::delete('Itemcategory/{Itemcategory}','destroy');
+    Route::get('Itemcategory/{itemcategory}','show');
+    Route::post('Itemcategory/edit/{itemcategory}','update');
+    Route::delete('Itemcategory/{itemcategory}','destroy');
 });
 Route::controller(ItemOfController::class)->group(function(){
     Route::get('Item','index');
     Route::post('Item/create','store');
-    Route::get('Item/{Item}','show');
-    Route::post('Item/edit/{Item}','update');
-    Route::delete('Item/{Item}','destroy');
+    Route::get('Item/{item}','show');
+    Route::post('Item/edit/{item}','update');
+    Route::delete('Item/{item}','destroy');
 });
 Route::controller(TransportTypeOfController::class)->group(function(){
     Route::get('Transporttype','index');
     Route::post('Transporttype/create','store');
-    Route::get('Transporttype/{Transporttype}','show');
-    Route::post('Transporttype/edit/{Transporttype}','update');
-    Route::delete('Transporttype/{Transporttype}','destroy');
+    Route::get('Transporttype/{transporttype}','show');
+    Route::post('Transporttype/edit/{transporttype}','update');
+    Route::delete('Transporttype/{transporttype}','destroy');
 });
 Route::controller(OrderDetailsOfController::class)->group(function(){
     Route::get('Orderdetails','index');
     Route::post('Orderdetails/create','store');
-    Route::get('Orderdetails/{Orderdetails}','show');
-    Route::post('Orderdetails/edit/{Orderdetails}','update');
-    Route::delete('Orderdetails/{Orderdetails}','destroy');
+    Route::get('Orderdetails/{orderdetails}','show');
+    Route::post('Orderdetails/edit/{orderdetails}','update');
+    Route::delete('Orderdetails/{orderdetails}','destroy');
 });
 Route::controller(StaffOfController::class)->group(function(){
     Route::get('Staff','index');
     Route::post('Staff/create','store');
-    Route::get('Staff/{Staff}','show');
-    Route::post('Staff/edit/{id}','update');
-    Route::delete('Staff/{id}','destroy');
+    Route::get('Staff/{staff}','show');
+    Route::post('Staff/edit/{staff}','update');
+    Route::delete('Staff/{staff}','destroy');
 });

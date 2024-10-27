@@ -9,4 +9,6 @@ class WarehouseBlock extends Model
 {
     use HasFactory;
     protected $fillable=['name', 'width','height','depth','location','note'];
+
+    
 }

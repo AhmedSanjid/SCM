@@ -9,7 +9,7 @@ use App\Models\Item;
 class ItemOfController extends BaseController
 {
     public function index(){
-        $data=Item::get();
+        $data=Item::with('ItemCategory')->get();
         return $this->sendResponse($data,"Item data");
     }
 

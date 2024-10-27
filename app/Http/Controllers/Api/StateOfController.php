@@ -9,7 +9,7 @@ use App\Models\State;
 class StateOfController extends BaseController
 {
     public function index(){
-        $data=State::get();
+        $data=State::with('country')->get();
         return $this->sendResponse($data,"State data");
     }
 

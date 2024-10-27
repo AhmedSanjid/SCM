@@ -9,7 +9,7 @@ use App\Models\Staff;
 class StaffOfController extends BaseController
 {
     public function index(){
-        $data=Staff::get();
+        $data=Staff::with('user')->get();
         return $this->sendResponse($data,"Staff data");
     }
 

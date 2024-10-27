@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class freightsOfController extends BaseController
 {
     public function index(){
-        $data=freights::get();
+        $data=freights::with('customer','Transporttype')->get();
         return $this->sendResponse($data,"freights data");
     }
 
