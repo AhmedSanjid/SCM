@@ -19,7 +19,6 @@ use App\Http\Controllers\Api\WarehouseBlockOfController;
 use App\Http\Controllers\Api\ItemCategoryBlockOfController;
 use App\Http\Controllers\Api\ItemOfController;
 use App\Http\Controllers\Api\TransportTypeOfController;
-use App\Http\Controllers\Api\OrderDetailsOfController;
 use App\Http\Controllers\Api\StaffOfController;
 // use App\Http\Controllers\Api\DesignationController;
 /*
@@ -100,7 +99,7 @@ Route::controller(customersController::class)->group(function(){
 Route::controller(freightsOfController::class)->group(function(){
     Route::get('freights','index');
     Route::post('freights/create','store');
-    Route::get('freights/{vendors}','show');
+    Route::get('freights/{freights}','show');
     Route::post('freights/edit/{freights}','update');
     Route::delete('freights/{freights}','destroy');
 });
