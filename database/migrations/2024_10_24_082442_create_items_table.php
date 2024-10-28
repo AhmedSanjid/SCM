@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->integer('item_category_id')->constrained('item_categories');
+            $table->foreignId('item_category_id')->constrained();
             $table->string('item_name');
             $table->text('note')->nullable();
             $table->timestamps();

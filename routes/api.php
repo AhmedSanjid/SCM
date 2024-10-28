@@ -160,13 +160,6 @@ Route::controller(TransportTypeOfController::class)->group(function(){
     Route::post('Transporttype/edit/{transporttype}','update');
     Route::delete('Transporttype/{transporttype}','destroy');
 });
-Route::controller(OrderDetailsOfController::class)->group(function(){
-    Route::get('Orderdetails','index');
-    Route::post('Orderdetails/create','store');
-    Route::get('Orderdetails/{orderdetails}','show');
-    Route::post('Orderdetails/edit/{orderdetails}','update');
-    Route::delete('Orderdetails/{orderdetails}','destroy');
-});
 Route::controller(StaffOfController::class)->group(function(){
     Route::get('Staff','index');
     Route::post('Staff/create','store');

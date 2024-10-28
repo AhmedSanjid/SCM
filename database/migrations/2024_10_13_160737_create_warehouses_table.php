@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('contact_no');
-            $table->integer('employee_id')->unique();
+            $table->foreignId('employee_id')->constrained();
             $table->timestamps();
         });
     }

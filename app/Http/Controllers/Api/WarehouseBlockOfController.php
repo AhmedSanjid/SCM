@@ -9,7 +9,7 @@ use App\Models\WarehouseBlock;
 class WarehouseBlockOfController extends BaseController
 {
     public function index(){
-        $data=WarehouseBlock::get();
+        $data=WarehouseBlock::with('warehouse')->get();
         return $this->sendResponse($data,"WarehouseBlock data");
     }
 

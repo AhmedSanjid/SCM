@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class WarehouseBlock extends Model
 {
     use HasFactory;
-    protected $fillable=['name', 'width','height','depth','location','note'];
-
+    protected $fillable=['name', 'warehouse_id', 'width','height','depth','location','note'];
+    public function warehouse(){
+        return $this->belongsTo(Warehouse::class);
+    }
     
 }
