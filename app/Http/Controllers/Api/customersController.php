@@ -17,8 +17,8 @@ class customersController extends BaseController
         $data=Customers::create($request->all());
         return $this->sendResponse($data,"customers created successfully");
     }
-    public function show(Customers $customers){
-        return $this->sendResponse($customers,"customers created successfully");
+    public function show(Customers $customer){
+        return $this->sendResponse($customer,"customers created successfully");
     }
 
     public function update(Request $request,$id){
@@ -27,9 +27,9 @@ class customersController extends BaseController
         return $this->sendResponse($id,"customers updated successfully");
     }
 
-    public function destroy(Customers $customers)
+    public function destroy(Customers $customer)
     {
-        $customers=$customers->delete();
-        return $this->sendResponse($customers,"customers deleted successfully");
+        $customer=$customer->delete();
+        return $this->sendResponse($customer,"customers deleted successfully");
     }
 }
