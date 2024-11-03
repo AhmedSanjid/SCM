@@ -16,8 +16,8 @@ class freightsOfController extends BaseController
         $data=freights::create($request->all());
         return $this->sendResponse($data,"freights created successfully");
     }
-    public function show(freights $freights){
-        return $this->sendResponse($freights,"freights created successfully");
+    public function show(freights $freight){
+        return $this->sendResponse($freight,"freights created successfully");
     }
 
     public function update(Request $request,$id){
@@ -26,9 +26,9 @@ class freightsOfController extends BaseController
         return $this->sendResponse($id,"freights updated successfully");
     }
 
-    public function destroy(freights $freights)
+    public function destroy(freights $freight)
     {
-        $freights=$freights->delete();
-        return $this->sendResponse($freights,"freights deleted successfully");
+        $freight=$freight->delete();
+        return $this->sendResponse($freight,"freights deleted successfully");
     }
 }

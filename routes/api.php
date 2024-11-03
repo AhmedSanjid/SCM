@@ -99,9 +99,9 @@ Route::controller(customersController::class)->group(function(){
 Route::controller(freightsOfController::class)->group(function(){
     Route::get('freights','index');
     Route::post('freights/create','store');
-    Route::get('freights/{freights}','show');
-    Route::post('freights/edit/{freights}','update');
-    Route::delete('freights/{freights}','destroy');
+    Route::get('freights/{freight}','show');
+    Route::post('freights/edit/{freight}','update');
+    Route::delete('freights/{freight}','destroy');
 });
 Route::controller(RoleOfController::class)->group(function(){
     Route::get('Role','index');
