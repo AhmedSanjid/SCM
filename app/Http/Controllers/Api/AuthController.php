@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\JsonResponse;
-use Validator
+use Validator;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends BaseController
