@@ -165,4 +165,5 @@ Route::controller(StaffOfController::class)->group(function(){
     Route::get('Staff/{staff}','show');
     Route::post('Staff/edit/{staff}','update');
     Route::delete('Staff/{staff}','destroy');
+    Route::get('roles','roles');
 });

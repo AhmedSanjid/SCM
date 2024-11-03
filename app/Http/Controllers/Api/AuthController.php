@@ -16,8 +16,7 @@ class AuthController extends BaseController
         $validate=Validator::make($r->all(),[
             'name'=>'required',
             'email'=>'required|email|unique:users',
-            'password'=>'required',
-            'c_password'=>'required|same:password'
+            'password'=>'required'
         ]);
 
         if($validate->fails()){
@@ -26,6 +25,7 @@ class AuthController extends BaseController
 
         $input= $r->all();
         $input['password']=bcrypt($input['password']);
+        $input['role_id']=1;
         $user=User::create($input);
         $data['token']=$user->createToken('hosp')->plainTextToken;
         $data['data']=$user;
