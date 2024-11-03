@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('warehouse_blocks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('warehouse_id')->constrained();
+            $table->string('warehouse_id');
             $table->string('name');
             $table->float('width'); 
             $table->float('height'); 
