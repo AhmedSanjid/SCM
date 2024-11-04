@@ -102,6 +102,7 @@ Route::controller(freightsOfController::class)->group(function(){
     Route::get('freights/{freight}','show');
     Route::post('freights/edit/{freight}','update');
     Route::delete('freights/{freight}','destroy');
+    Route::post('freights/check_customer','checkCustomer');
 });
 Route::controller(RoleOfController::class)->group(function(){
     Route::get('Role','index');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 use App\Models\freights;
+use App\Models\Customers;
 use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,13 @@ class freightsOfController extends BaseController
     }
 
     public function store(Request $request){
-        $data=freights::create($request->all());
+        $input=$request->all();
+        if($request->customer_id==''){
+            $customer=Customers::create($request->all());
+            $input['customer_id']=$customer->id;
+        }
+
+        $data=freights::create($input);
         return $this->sendResponse($data,"freights created successfully");
     }
     public function show(freights $freight){
@@ -30,5 +37,14 @@ class freightsOfController extends BaseController
     {
         $freight=$freight->delete();
         return $this->sendResponse($freight,"freights deleted successfully");
+    }
+
+    public function checkCustomer(Request $request)
+    {
+        $customer=Customers::select('company_name','address','id as customer_id')->where('email',$request->email)
+                            ->where('contact_no',$request->contact_no)
+                            ->first();
+
+        return $this->sendResponse($customer,"freights deleted successfully");
     }
 }
