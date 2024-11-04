@@ -40,13 +40,6 @@ Route::controller(AuthController::class)->group(function(){
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-// Route::controller(DesignationController::class)->group(function(){
-//     Route::get('designation','index');
-//     Route::get('designation/{designation}','show');
-//     Route::put('designation/{designation}','update');
-//     Route::delete('designation/{designation}','destroy');
-//     Route::post('designation/create','store');
-// });
 Route::controller(DiscountController::class)->group(function(){
     Route::get('discount','index');
     Route::post('discount/create','store');
