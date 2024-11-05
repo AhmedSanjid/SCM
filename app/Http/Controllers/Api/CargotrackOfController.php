@@ -9,7 +9,7 @@ use App\Models\Cargotrack;
 class CargotrackOfController extends Controller
 {
     public function index(){
-        $data=Cargotrack::get();
+        $data=Cargotrack::with('warehouse','warehouseblock')->get();
         return $this->sendResponse($data,"cargotrack data");
     }
 

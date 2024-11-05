@@ -23,6 +23,7 @@ use App\Http\Controllers\Api\StaffOfController;
 use App\Http\Controllers\Api\OrderdetailsOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
 use App\Http\Controllers\Api\CrewOfController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,21 +39,20 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('register','_register');
     Route::post('login','_login');
 });
+
 Route::controller(CrewOfController::class)->group(function(){
     Route::post('signup','_signup');
-    Route::post('Clogin','_Clogin');
+    Route::post('clogin','_clogin');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::controller(DiscountController::class)->group(function(){
-    Route::get('discount','index');
-    Route::post('discount/create','store');
-    Route::get('discount/{discount}','show');
-    Route::post('discount/edit/{id}','update');
-    Route::delete('discount/{discount}','destroy');
+
+Route::middleware('auth:sanctum')->get('/crew', function (Request $request) {
+    return $request->crew();
 });
+
 Route::controller(InsuranceController::class)->group(function(){
     Route::get('insurance','index');
     Route::post('insurance/create','store');

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\User;
+use App\Models\Crew;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\JsonResponse;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CrewOfController extends BaseController
 {
-    public function signup(Request $r): JsonResponse
+    public function _signup(Request $r): JsonResponse
     {
         $validate=Validator::make($r->all(),[
             'name'=>'required',
@@ -26,23 +26,22 @@ class CrewOfController extends BaseController
 
         $input= $r->all();
         $input['password']=bcrypt($input['password']);
-        $user=User::create($input);
-        $data['token']=$user->createToken('hosp')->plainTextToken;
-        $data['data']=$user;
+        $crew=Crew::create($input);
+        $data['token']=$crew->createToken('hosp')->plainTextToken;
+        $data['data']=$crew;
         return $this->sendResponse($data,"User register successfully");
 
     }
 
-    public function Clogin(Request $r):JsonResponse
+    public function _clogin(Request $r):JsonResponse
     {
-        if(Auth::attempt(['email' => $r->email, 'password' => $r->password])){
-            $user=Auth::user();
-            $data['token']=$user->createToken('hosp')->plainTextToken;
-            $data['data']=$user;
+        if(Auth::attempt(['name' => $r->name, 'password' => $r->password])){
+            $crew=Auth::user();
+            $data['token']=$crew->createToken('hosp')->plainTextToken;
+            $data['data']=$crew;
             return $this->sendResponse($data,"User login successfully");
         }else{
             return $this->sendError(['error'=>'email or password is not correct'],"Unauthorized",400);
         }
     }
-
 }
