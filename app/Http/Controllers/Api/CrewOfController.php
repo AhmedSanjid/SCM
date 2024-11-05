@@ -9,9 +9,9 @@ use Illuminate\Http\JsonResponse;
 use Validator;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends BaseController
+class CrewOfController extends BaseController
 {
-    public function _register(Request $r): JsonResponse
+    public function signup(Request $r): JsonResponse
     {
         $validate=Validator::make($r->all(),[
             'name'=>'required',
@@ -33,7 +33,7 @@ class AuthController extends BaseController
 
     }
 
-    public function _login(Request $r):JsonResponse
+    public function Clogin(Request $r):JsonResponse
     {
         if(Auth::attempt(['email' => $r->email, 'password' => $r->password])){
             $user=Auth::user();
@@ -44,7 +44,5 @@ class AuthController extends BaseController
             return $this->sendError(['error'=>'email or password is not correct'],"Unauthorized",400);
         }
     }
-
-
 
 }

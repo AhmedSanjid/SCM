@@ -22,6 +22,7 @@ use App\Http\Controllers\Api\TransportTypeOfController;
 use App\Http\Controllers\Api\StaffOfController;
 use App\Http\Controllers\Api\OrderdetailsOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
+use App\Http\Controllers\Api\CrewOfController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,6 +37,10 @@ use App\Http\Controllers\Api\CargotrackOfController;
 Route::controller(AuthController::class)->group(function(){
     Route::post('register','_register');
     Route::post('login','_login');
+});
+Route::controller(CrewOfController::class)->group(function(){
+    Route::post('signup','_signup');
+    Route::post('Clogin','_Clogin');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
