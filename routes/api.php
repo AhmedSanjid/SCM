@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\DiscountController;
 use App\Http\Controllers\Api\InsuranceController;
 use App\Http\Controllers\Api\AirfreightController;
 use App\Http\Controllers\Api\SailingController;

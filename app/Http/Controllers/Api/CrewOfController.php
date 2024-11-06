@@ -17,7 +17,7 @@ class CrewOfController extends BaseController
             'name'=>'required',
             'email'=>'required|email|unique:users',
             'password'=>'required',
-            'c_password'=>'required|same:password'
+            // 'c_password'=>'required|same:password'
         ]);
 
         if($validate->fails()){
@@ -36,7 +36,7 @@ class CrewOfController extends BaseController
     public function _clogin(Request $r):JsonResponse
     {
         if(Auth::attempt(['name' => $r->name, 'password' => $r->password])){
-            $crew=Auth::user();
+            $crew=Auth::crew();
             $data['token']=$crew->createToken('hosp')->plainTextToken;
             $data['data']=$crew;
             return $this->sendResponse($data,"User login successfully");
