@@ -39,18 +39,18 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('login','_login');
 });
 
-Route::controller(CrewOfController::class)->group(function(){
-    Route::post('signup','_signup');
-    Route::post('clogin','_clogin');
-});
+// Route::controller(CrewOfController::class)->group(function(){
+//    Route::post('signup','_signup');
+//     Route::post('clogin','_clogin');
+// });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth:sanctum')->get('/crew', function (Request $request) {
-    return $request->crew();
-});
+// Route::middleware('auth:sanctum')->get('/crew', function (Request $request) {
+//     return $request->crew();
+// });
 
 Route::controller(InsuranceController::class)->group(function(){
     Route::get('insurance','index');
