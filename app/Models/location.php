@@ -10,7 +10,7 @@ class location extends Model
     use HasFactory;
     protected $fillable=['country_id', 'state_id','address'];
 
-    public function warehouse(){
+    public function country(){
         return $this->belongsTo(Country::class);
     }
     public function state(){

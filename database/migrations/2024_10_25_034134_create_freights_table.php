@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('freights', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
+            $table->string('company_name')->constrained();
             $table->decimal('total_amount', 10, 2);
             $table->decimal('vat', 5, 2);
             $table->string('payment_method', 50);

@@ -19,7 +19,6 @@ use App\Http\Controllers\Api\ItemCategoryBlockOfController;
 use App\Http\Controllers\Api\ItemOfController;
 use App\Http\Controllers\Api\TransportTypeOfController;
 use App\Http\Controllers\Api\StaffOfController;
-use App\Http\Controllers\Api\OrderdetailsOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
 use App\Http\Controllers\Api\CrewOfController;
 
@@ -165,13 +164,6 @@ Route::controller(StaffOfController::class)->group(function(){
     Route::post('Staff/edit/{staff}','update');
     Route::delete('Staff/{staff}','destroy');
     Route::get('roles','roles');
-});
-Route::controller(OrderdetailsOfController::class)->group(function(){
-    Route::get('orderdetails','index');
-    Route::post('orderdetails/create','store');
-    Route::get('orderdetails/{orderdetails}','show');
-    Route::post('orderdetails/edit/{orderdetails}','update');
-    Route::delete('rderdetails/{orderdetails}','destroy');
 });
 Route::controller(CargotrackOfController::class)->group(function(){
     Route::get('Cargotrack','index');
