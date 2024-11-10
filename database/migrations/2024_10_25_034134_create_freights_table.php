@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('freights', function (Blueprint $table) {
             $table->id();
             $table->string('company_name')->constrained();
-            $table->decimal('total_amount', 10, 2);
-            $table->decimal('vat', 5, 2);
-            $table->string('payment_method', 50);
+            $table->string('payment_method');
+            $table->string('contact_no'); 
+            $table->string('email');
+            $table->string('address');
+            $table->string('item');
             $table->string('shipment_type', 50);
             $table->dateTime('pickup_time');
             $table->dateTime('delivery_time');

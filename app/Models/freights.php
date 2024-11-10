@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class freights extends Model
 {
     use HasFactory;
-    protected $fillable=['company_name','total_amount','vat', 'payment_method','shipment_type','pickup_time','delivery_time', 'total_qty', 'pickup_location', 'delivery_location', 'transport_type_id'];
+    protected $fillable=['company_name', 'customer_id', 'payment_method', 'address', 'item', 'shipment_type','pickup_time','delivery_time', 'total_qty', 'pickup_location', 'delivery_location', 'transport_type_id'];
 
     public function customer(){
         return $this->belongsTo(Customers::class);
