@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class freightsOfController extends BaseController
 {
     public function index(){
-        $data=freights::with('customer','Transporttype')->get();
+        $data=freights::with('customer','transporttype')->get();
         return $this->sendResponse($data,"freights data");
     }
 
