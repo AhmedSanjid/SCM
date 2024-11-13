@@ -11,9 +11,9 @@ class Cargotrack extends Model
     protected $fillable=['status','note', 'location','location_time','lat_id','long_id','recived_by','warehouse_id','warehouse_block_id'];
 
     public function warehouse(){
-        return $this->belongsTo(Warehouse::class);
+        return $this->belongsTo(Warehouse::class, 'warehouse_id');
     }
     public function warehouseblock(){
-        return $this->belongsTo(WarehouseBlock::class);
+        return $this->belongsTo(WarehouseBlock::class, 'warehouse_block_id');
     }
 }

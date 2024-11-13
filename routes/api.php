@@ -130,11 +130,11 @@ Route::controller(locationOfController::class)->group(function(){
     Route::delete('Location/{location}','destroy');
 });
 Route::controller(WarehouseBlockOfController::class)->group(function(){
-    Route::get('Warehouseblock','index');
-    Route::post('Warehouseblock/create','store');
-    Route::get('Warehouseblock/{warehouseblock}','show');
-    Route::post('Warehouseblock/edit/{warehouseblock}','update');
-    Route::delete('Warehouseblock/{warehouseblock}','destroy');
+    Route::get('warehouseblock','index');
+    Route::post('warehouseblock/create','store');
+    Route::get('warehouseblock/{warehouseblock}','show');
+    Route::post('warehouseblock/edit/{warehouseblock}','update');
+    Route::delete('warehouseblock/{warehouseblock}','destroy');
 });
 Route::controller(ItemCategoryBlockOfController::class)->group(function(){
     Route::get('Itemcategory','index');
@@ -166,9 +166,9 @@ Route::controller(StaffOfController::class)->group(function(){
     Route::get('roles','roles');
 });
 Route::controller(CargotrackOfController::class)->group(function(){
-    Route::get('Cargotrack','index');
-    Route::post('Cargotrack/create','store');
-    Route::get('Cargotrack/{cargotrack}','show');
-    Route::post('Cargotrack/edit/{cargotrack}','update');
-    Route::delete('Cargotrack/{cargotrack}','destroy');
+    Route::get('cargotrack','index');
+    Route::post('cargotrack/create','store');
+    Route::get('cargotrack/{cargotrack}','show');
+    Route::post('cargotrack/edit/{cargotrack}','update');
+    Route::delete('cargotrack/{cargotrack}','destroy');
 });
