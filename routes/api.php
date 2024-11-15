@@ -20,6 +20,7 @@ use App\Http\Controllers\Api\ItemOfController;
 use App\Http\Controllers\Api\TransportTypeOfController;
 use App\Http\Controllers\Api\StaffOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
+use App\Http\Controllers\Api\AlertController;
 use App\Http\Controllers\Api\CrewOfController;
 
 /*
@@ -171,4 +172,11 @@ Route::controller(CargotrackOfController::class)->group(function(){
     Route::get('cargotrack/{cargotrack}','show');
     Route::post('cargotrack/edit/{cargotrack}','update');
     Route::delete('cargotrack/{cargotrack}','destroy');
+});
+Route::controller(AlertController::class)->group(function(){
+    Route::get('alert','index');
+    Route::post('alert/create','store');
+    Route::get('alert/{alert}','show');
+    Route::post('alert/edit/{alert}','update');
+    Route::delete('alert/{alert}','destroy');
 });
