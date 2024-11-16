@@ -21,7 +21,9 @@ use App\Http\Controllers\Api\TransportTypeOfController;
 use App\Http\Controllers\Api\StaffOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
 use App\Http\Controllers\Api\AlertController;
+use App\Http\Controllers\Api\HistoryOfController;
 use App\Http\Controllers\Api\CrewOfController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -179,4 +181,11 @@ Route::controller(AlertController::class)->group(function(){
     Route::get('alert/{alert}','show');
     Route::post('alert/edit/{alert}','update');
     Route::delete('alert/{alert}','destroy');
+});
+Route::controller(HistoryOfController::class)->group(function(){
+    Route::get('history','index');
+    Route::post('history/create','store');
+    Route::get('history/{history}','show');
+    Route::post('history/edit/{history}','update');
+    Route::delete('history/{history}','destroy');
 });
