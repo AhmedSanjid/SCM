@@ -8,8 +8,12 @@ use App\Models\History;
 
 class HistoryOfController extends BaseController
 {
-    public function index(){
-        $data=History::get();
+    public function index(Request $request){
+        $data=History::latest();
+        if($request->email && $request->company_name){
+            $data=$data->where('email',$request->email)->where('company_name',$request->company_name);
+        }
+        $data=$data->get();
         return $this->sendResponse($data,"History data");
     }
 
