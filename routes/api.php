@@ -22,6 +22,7 @@ use App\Http\Controllers\Api\StaffOfController;
 use App\Http\Controllers\Api\CargotrackOfController;
 use App\Http\Controllers\Api\AlertController;
 use App\Http\Controllers\Api\HistoryOfController;
+use App\Http\Controllers\Api\MembershipOfController;
 use App\Http\Controllers\Api\CrewOfController;
 
 
@@ -188,4 +189,11 @@ Route::controller(HistoryOfController::class)->group(function(){
     Route::get('history/{history}','show');
     Route::post('history/edit/{history}','update');
     Route::delete('history/{history}','destroy');
+});
+Route::controller(MembershipOfController::class)->group(function(){
+    Route::get('membership','index');
+    Route::post('membership/create','store');
+    Route::get('membership/{membership}','show');
+    Route::post('membership/edit/{membership}','update');
+    Route::delete('membership/{membership}','destroy');
 });
