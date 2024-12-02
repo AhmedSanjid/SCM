@@ -23,6 +23,7 @@ use App\Http\Controllers\Api\CargotrackOfController;
 use App\Http\Controllers\Api\AlertController;
 use App\Http\Controllers\Api\HistoryOfController;
 use App\Http\Controllers\Api\MembershipOfController;
+use App\Http\Controllers\Api\CommunityOfController;
 use App\Http\Controllers\Api\CrewOfController;
 
 
@@ -196,4 +197,11 @@ Route::controller(MembershipOfController::class)->group(function(){
     Route::get('membership/{membership}','show');
     Route::post('membership/edit/{membership}','update');
     Route::delete('membership/{membership}','destroy');
+});
+Route::controller(CommunityOfController::class)->group(function(){
+    Route::get('community','index');
+    Route::post('community/create','store');
+    Route::get('community/{community}','show');
+    Route::post('community/edit/{community}','update');
+    Route::delete('community/{community}','destroy');
 });
