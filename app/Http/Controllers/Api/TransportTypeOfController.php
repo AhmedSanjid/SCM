@@ -15,21 +15,21 @@ class TransportTypeOfController extends BaseController
 
     public function store(Request $request){
         $data=TransportType::create($request->all());
-        return $this->sendResponse($data,"State created successfully");
+        return $this->sendResponse($data,"Transport created successfully");
     }
     public function show(TransportType $transporttype){
-        return $this->sendResponse($transporttype,"State created successfully");
+        return $this->sendResponse($transporttype,"Transport created successfully");
     }
 
     public function update(Request $request,$id){
 
         $data=TransportType::where('id',$id)->update($request->all());
-        return $this->sendResponse($id,"State updated successfully");
+        return $this->sendResponse($id,"Transport updated successfully");
     }
 
     public function destroy(TransportType $transporttype)
     {
         $transporttype=$transporttype->delete();
-        return $this->sendResponse($transporttype,"State deleted successfully");
+        return $this->sendResponse($transporttype,"Transport deleted successfully");
     }
 }
